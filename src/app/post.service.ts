@@ -2,6 +2,8 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Response } from '@angular/http';
+import {Post} from './post';
+import {Comment} from './comment';
 
 @Injectable()
 export class PostService {
@@ -17,7 +19,7 @@ export class PostService {
 
    // get comments based on the index
    getCommentsForPost(index: number): Observable<Comment[]> {
-  let url = `http://jsonplaceholder.typicode.com/posts` + index + '/comments';
+  let url = `http://jsonplaceholder.typicode.com/post/` + index + '/comments';
 
   return this.http.get<Comment[]>(url);
  }
