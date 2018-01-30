@@ -25,7 +25,7 @@ var PostListComponent = (function () {
         this.printComments(this.comments);
     };
     PostListComponent.prototype.printComments = function (commentArr) {
-        for (var i = 0; i < 5; i++) {
+        for (var i = 0; i < this.comments.length; i++) {
             console.log(commentArr[i].email);
             console.log(commentArr[i].name);
             console.log(commentArr[i].body);

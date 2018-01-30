@@ -3,11 +3,19 @@ import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule, Routes } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import {PostListComponent} from './post-list.component';
-import {AppComponent} from './app.component';
 import {PostService} from './post.service';
+import {AppComponent} from './app.component';
+import {Comment} from './comment';
+import {Post} from './post';
+
+
+
+
+
+
 
 const appRoutes: Routes = [
-  { path: 'post', component: PostListComponent }
+  { path: '**', component: PostListComponent }
 ];
 
 @NgModule({
